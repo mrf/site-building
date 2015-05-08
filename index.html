@@ -40,45 +40,58 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+        <section>
+          <h1>Site Building Like a Software Engineer</h1>
+        </section>
+        <section>
+          <h2>About Me</h2>
+          <img style="width: 100%; border: 0 !important;" src="images/me.jpg" />
+          <h4>mark@chapterthree.com</h4>
+          <h4>@mrf on Drupal.org, Twitter</h4>
+        </section>
         <section data-markdown>
-          <script type="text/templae">
+          <script type="text/template">
            ## Everything you thought you knew about Drupal is wrong
           </script>
         </section>
 
 
         <section data-markdown>
-          <script type="text/templae">
+          <script type="text/template">
             ## Drupal is not a content management system
           </script>
         </section>
 
         <section data-markdown>
-          <script type="text/templae">
+          <script type="text/template">
             ## Drupal is a piece of software
           </script>
         </section>
 
         <section data-markdown>
-          <script type="text/templae">
+          <script type="text/template">
             ## For building content management systems
           </script>
         </section>
 
         <section data-markdown>
-          <script type="text/templae">
+          <script type="text/template">
+            <img src="images/download.gif" />
+          </script>
+          <aside class="notes">
+            byzanz-record -d 15 --delay=10 -x 600 -y 300 -w 1600 -h 900 animation.gif
+          </aside>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
             ## Congratulations!
           </script>
         </section>
 
-        <section data-markdown>
-          <script type="text/templae">
-            TODO: Animated gif of clicking download on d.o
-          </script>
-        </section>
 
         <section data-markdown>
-          <script type="text/templae">
+          <script type="text/template">
             ## You just became a software developer...
           </script>
         </section>
@@ -86,57 +99,117 @@
 
 
         <section data-markdown>
-          <script type="text/templae">
+          <script type="text/template">
             # Complexity
           </script>
         </section>
         <section>
-            <img src="https://brucelynnblog.files.wordpress.com/2011/09/dilbert-complexity.jpg">
-            TODO: local link + cite
+            <img style="width: 100%;" src="images/dilbert-complexity.jpg">
         </section>
         <section data-markdown>
-          <script type="text/templae">
+          <script type="text/template">
             ## Complexity means a lot of different things in site building
           </script>
         </section>
         <section>
-          TODO: Graph of code weight in common distros vs core
+        <h2>File Count</h2>
+<style>
+    #vertgraph {                    
+        width: 378px; 
+        height: 250px; 
+        position: relative; 
+        background: url("g_backbar.gif") no-repeat; 
+    }
+    #vertgraph ul { 
+        width: 378px; 
+        height: 207px; 
+        margin: 0; 
+        padding: 0; 
+        list-style-type: none;
+    }
+    #vertgraph ul li {  
+        position: absolute; 
+        width: 90px; 
+        height: 160px; 
+        bottom: 34px; 
+        padding: 0 !important; 
+        margin: 0 !important; 
+        background: #666;
+        text-align: center; 
+        font-weight: bold; 
+        line-height: 2.5em;
+        box-shadow: 10px 5px 9px 0px rgba(0,0,0,0.65);
+    }
+
+    #vertgraph li.critical { background-position: 0px bottom !important; }
+    #vertgraph li.high { left: 281px; background-position: -28px bottom !important; }
+    #vertgraph li.medium { left: 501px; background-position: -56px bottom !important; }
+</style>
+<div id="vertgraph">
+    <!-- 1/32nd scale -->
+    <ul>
+        <li class="critical" style="height: 250px;"></li>
+        <li class="high" style="height: 167px;"></li>
+        <li class="medium" style="height: 34px;"></li>
+    </ul>
+</div>
+    Open Atrium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Panopoly &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Drupal 7
+    <br />
+    8021&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5353 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1096 
+          <aside class="notes">
+            find . -type f | wc
+          </aside>
         </section>
         <section>
-          TODO: Graph of module numbers in common distros vs core
+          <h2>Enabled Modules</h2>
+<div id="vertgraph">
+    <!-- 1/32nd scale -->
+    <ul>
+        <li class="critical" style="height: 210px;"></li>
+        <li class="high" style="height: 117px;"></li>
+        <li class="medium" style="height: 33px;"></li>
+    </ul>
+</div>
+    Open Atrium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Panopoly &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Drupal 7 
+    <br />
+    210&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 117 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 33
+          <aside class="notes">
+            drush pm-list --status=enabled | count
+          </aside>
         </section>
 
-
-
         <section data-markdown>
-          <script type="text/templae">
+          <script type="text/template">
            # Architecture
           </script>
         </section>
         <section>
-<img src="http://www.90percentofeverything.com/wp-content/uploads/2009/05/1890stripprint.gif">
-TODO: local + cite
+          <img style="width: 100%;" src="images/rightway.png">
         </section>
         <section data-markdown>
-          <script type="text/templae">
-            ## Architecture is primarly defined by module selection
+          <script type="text/template">
+            ## Architecture is defined by module selection
+          </script>
+        </section>
+        <section>
+          <img style="width: 60%;" src="images/maintainers.jpg">
+        </section>
+        <section>
+          <img style="width: 100%;" src="images/usage.png">
+        </section>
+        <section>
+          <img style="width: 100%;" src="images/releases.png">
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+           ## Special Cases
           </script>
         </section>
         <section data-markdown>
-          <script type="text/templae">
-  - TODO find screenshots of relevant sections of module screen (downloaded/ instlaled/ maintainer/ recent commits) from my how contrib works pres
+          <script type="text/template">
+           ## Panels
           </script>
-        </section>
-        <section data-markdown>
-          <script type="text/templae">
-           ## Special Cases 
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/templae">
-           ## Panels 
-          </script>
-          <aside>
+          <aside class="notes">
             - new display layer
             - new visibiltiy rules
             - new data structures
@@ -146,22 +219,172 @@ TODO: local + cite
           </aside>
         </section>
         <section data-markdown>
-          <script type="text/templae">
-           ## Domain Access 
+          <script type="text/template">
+           ## Display Suite
           </script>
-          <aside>
+          <aside class="notes">
+            - less severe but moved logic into the cms
+          </aside>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+           ## Views
+          </script>
+          <aside class="notes">
+            - less severe but moved logic into the cms
+            - we now have a visibility layer we didn't before
+          </aside>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+           ## Domain Access
+          </script>
+          <aside class="notes">
             - Site within a site
             - Every decision within your site just became more comlicated 
           </aside>
         </section>
         <section data-markdown>
-          <script type="text/templae">
-           ## Display Suite 
+          <script type="text/template">
+           ## Organic Groups
           </script>
-          <aside>
-            - less severe but still a decision to move tempalte logic into the cms
+          <aside class="notes">
+            - microsites within a site
+            - a whole new access control layer
+            - Every decision within your site just became more comlicated 
           </aside>
+        </section>
 
+        <section>
+          <img style="width: 100%" src="images/homer.jpg" />
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+           # Data Structures
+          </script>
+        </section>
+
+        <section>
+          <q cite="Phil Karlton">
+            There are only two hard problems in Computer Science: cache invalidation and naming things.
+          </q>
+          - Phil Karlton
+          <aside class="notes">
+            - as important here as in code
+            - these often used in code!
+          </aside>
+        </section>
+
+        <section>
+            <img style="width: 100%;" src="images/site-builder-data.jpg" />
+        </section>
+        <section>
+            <img style="width: 100%;" src="images/mysql-data.jpg" />
+        </section>
+
+
+        <section data-markdown>
+          <script type="text/template">
+            # Old Guard
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+           ## Content Types
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+           ## Fields
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+           ## Taxonomy
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+           ## Menus
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            # Upstarts
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+           ## Flag and Flag Like Modules
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+           ## Reference Fields
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+           ## Field Groups
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+           ## Field Collections
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+           ## Nodequeues and Draggable Views
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+           ## Documentation
+          </script>
+        </section>
+        <section>
+          <img style="height: 100%" src="images/content-type-comment.png" />
+        </section>
+        <section>
+          <img style="height: 100%" src="images/taxonomy-comment.png" />
+        </section>
+        <section>
+          <img style="height: 100%" src="images/menu-comment.png" />
+        </section>
+        <section>
+          <img style="height: 100%" src="images/block-comment.png" />
+        </section>
+        <section>
+          <img style="height: 100%" src="images/views-comment.png" />
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+           # Conclusion 
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+           ## Don't Add Complexity You Don't Need
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+           ## Name Things Deliberately
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+           ## Comment Liberally
+          </script>
+        </section>
+        <section>
+          <h2>Thank You!</h2>
+          <img style="width: 100%; border: 0 !important;" src="images/me.jpg" />
+          <h4>mark@chapterthree.com</h4>
+          <h4>@mrf on Drupal.org, Twitter</h4>
         </section>
 
 
